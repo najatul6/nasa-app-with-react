@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+  font-family: "Montserrat", sans-serif;
+}
+
+#root {
+  /* min-height: 100vh;
+  display: flex;
+  display: relative; */
+  @apply min-h-[100vh] flex relative
+}
+
+.imgContainer {
+  @apply flex flex-col max-h-[100vh] w-full
+}
+
+.bgImage {
+ @apply w-full h-full flex-1 object-cover
+}
+
+footer {
+  @apply fixed bottom-0 left-0 w-full flex items-center justify-between gap-4 p-4
+}
+
+footer div{
+  @apply flex flex-col
+}
+
+footer h2 {
+ @apply text-[1.4rem]
+}
+
+footer h1 {
+ @apply text-[0.9rem] font-extralight
+}
+
+footer button {
+  @apply bg-transparent border-none outline-none text-white p-4 duration-200 cursor-pointer
+}
+
+footer button i {
+  @apply text-[1.3rem]
+}
+
+footer button:hover{
+  @apply opacity-[0.7]
+}
+
+.bgGradient {
+  @apply absolute inset-0 z-[-1] bg-gradient-to-t from-[#030615] to-[#FFFFFF00]
+}
+
+.sidebar{
+  @apply fixed inset-0 z-[10] flex flex-col
+}
+
+.bgOverlay{
+  @apply absolute inset-0 bg-[#030615] opacity-[0.6]
+}
+
+
+
+.sidebarContents {
+  z-index: 15;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  overflow-y: scroll;
+  height: 100%;
+  width: 80%;
+  max-width: 800px;
+  margin-left: auto;
+  background: #030615;
+}
+
+.sidebarContents h2 {
+  font-weight: 200;
+  font-size: 1.4rem;
+}
+
+.sidebarContents div {
+  flex: 1;
+}
+
+.sidebarContents button {
+  background: transparent;
+  color: white;
+  border: none;
+  outline: none;
+  margin-right: auto;
+  cursor: pointer;
+  transition-duration: 200ms;
+  padding: 1rem 0;
+}
+
+.sidebarContents button:hover {
+  opacity: 0.7;
+}
+
+.descriptionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.descriptionTitle {
+  font-size: 1.1rem;
+  font-weight: 200;
+}
+
+.loadingState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.loadingState i {
+  opacity: 0.2;
+  font-size: 3rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@media (min-width: 640px) {
+  .sidebar {
+    position: relative;
+    inset: unset;
+    min-width: 30%;
+    max-height: 100vh;
+    box-shadow: 0 0 40px 1px #030615;
+  }
+
+  .sidebarContents {
+    margin: unset;
+    width: 100%;
+  }
+
+  .bgOverlay {
+    right: 0;
+    left: unset;
+    width: 100vw;
+  }
+}
