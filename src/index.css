@@ -9,14 +9,11 @@ body{
 }
 
 #root {
-  /* min-height: 100vh;
-  display: flex;
-  display: relative; */
-  @apply min-h-[100vh] flex relative
+  @apply min-h-screen flex relative
 }
 
 .imgContainer {
-  @apply flex flex-col max-h-[100vh] w-full
+  @apply flex flex-col max-h-screen w-full
 }
 
 .bgImage {
@@ -63,70 +60,39 @@ footer button:hover{
   @apply absolute inset-0 bg-[#030615] opacity-[0.6]
 }
 
-
-
-.sidebarContents {
-  z-index: 15;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 1rem;
-  overflow-y: scroll;
-  height: 100%;
-  width: 80%;
-  max-width: 800px;
-  margin-left: auto;
-  background: #030615;
+.sidebarContents{
+  @apply z-[15] relative flex flex-col gap-4 p-4 overflow-y-scroll h-full w-[80%] max-w-[800px] ml-auto bg-[#030615]
 }
-
-.sidebarContents h2 {
-  font-weight: 200;
-  font-size: 1.4rem;
+.sidebarContents h2{
+  @apply font-extralight text-[1.4rem]
 }
 
 .sidebarContents div {
-  flex: 1;
+ @apply flex-1
 }
 
-.sidebarContents button {
-  background: transparent;
-  color: white;
-  border: none;
-  outline: none;
-  margin-right: auto;
-  cursor: pointer;
-  transition-duration: 200ms;
-  padding: 1rem 0;
+.sidebarContents button{
+  @apply bg-transparent border-none outline-none text-white py-4 duration-200 cursor-pointer mr-auto
+}
+.sidebarContents button:hover{
+  @apply opacity-[0.7]
 }
 
-.sidebarContents button:hover {
-  opacity: 0.7;
+.descriptionContainer{
+  @apply flex flex-col gap-[0.5rem]
+}
+.descriptionTitle{
+  @apply font-extralight text-[1.4rem]
 }
 
-.descriptionContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+.loadingState{
+  @apply flex items-center justify-center flex-1
+}
+.loadingState i{
+  @apply opacity-[0.2] text-5xl animate-spin duration-1000 ease-linear infinite
 }
 
-.descriptionTitle {
-  font-size: 1.1rem;
-  font-weight: 200;
-}
 
-.loadingState {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: 1;
-}
-
-.loadingState i {
-  opacity: 0.2;
-  font-size: 3rem;
-  animation: spin 1s linear infinite;
-}
 
 @keyframes spin {
   from {
@@ -138,24 +104,18 @@ footer button:hover{
   }
 }
 
-
 @media (min-width: 640px) {
   .sidebar {
-    position: relative;
-    inset: unset;
-    min-width: 30%;
-    max-height: 100vh;
-    box-shadow: 0 0 40px 1px #030615;
+    @apply relative min-w-[30%] max-h-screen;
+    box-shadow: 0 0 40px 1px #030615; 
   }
 
   .sidebarContents {
-    margin: unset;
-    width: 100%;
+    @apply m-0 w-full;
   }
 
   .bgOverlay {
-    right: 0;
+    @apply right-0 w-screen;
     left: unset;
-    width: 100vw;
   }
 }
