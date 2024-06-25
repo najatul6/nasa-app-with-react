@@ -89,21 +89,13 @@ footer button:hover {
 }
 
 .loadingState {
-  @apply flex items-center justify-center flex-1;
+  @apply flex items-center justify-center flex-1 ;
 }
-/* .loadingState i{
-  @apply opacity-[0.2] text-5xl animate-spin duration-1000 ease-linear infinite
-} */
 
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
+.spin_logo {
+  @apply opacity-[0.6] text-5xl md:text-6xl animate-spin duration-1000 ease-linear ;
 }
+
 
 @media (min-width: 640px) {
   .sidebar {

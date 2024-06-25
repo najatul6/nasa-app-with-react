@@ -33,8 +33,8 @@ function App() {
       {apiData ? (
         <Main />
       ) : (
-        <div className="">
-          <FaEarthAmericas />
+        <div className="loadingState">
+          <FaEarthAmericas  className="spin_logo"/>
         </div>
       )}
       {showModal && <Sidebar handleToggleModal={handleToggleModal} />}
