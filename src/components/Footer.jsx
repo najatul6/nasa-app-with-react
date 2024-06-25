@@ -1,6 +1,7 @@
 import { FaCircleInfo } from "react-icons/fa6";
 
-export default function Footer() {
+export default function Footer(props) {
+  const {handleToggleModal}=props;
   return (
     <footer>
         <div className="bgGradient">
@@ -10,7 +11,7 @@ export default function Footer() {
             <h2>Your home. Our Mission.</h2>
             <h1>NASA PROJECT</h1>
         </div>
-        <button>
+        <button onClick={handleToggleModal}>
         <FaCircleInfo />
 
         </button>

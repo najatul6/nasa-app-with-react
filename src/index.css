@@ -49,12 +49,10 @@ footer h1 {
 }
 
 footer button {
-  @apply bg-transparent border-none outline-none text-white p-4 duration-200 cursor-pointer;
+  @apply bg-transparent border-none outline-none text-white p-4 duration-200 cursor-pointer text-[1.3rem];
 }
 
-footer button i {
-  @apply text-[1.3rem];
-}
+
 
 footer button:hover {
   @apply opacity-[0.7];
@@ -77,7 +75,7 @@ footer button:hover {
 }
 
 .sidebarContents button {
-  @apply bg-transparent border-none outline-none text-white py-4 duration-200 cursor-pointer mr-auto;
+  @apply bg-transparent border-none outline-none text-white py-4 duration-200 cursor-pointer mr-auto text-[1.3rem];
 }
 .sidebarContents button:hover {
   @apply opacity-[0.7];
