@@ -1,98 +1,101 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-body{
+:root {
+  @apply leading-[1.5] font-normal text-white bg-[#030615];
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-family: "Montserrat", sans-serif;
 }
 
 #root {
-  @apply min-h-screen flex relative
+  @apply min-h-screen flex relative;
 }
 
 .imgContainer {
-  @apply flex flex-col max-h-screen w-full
+  @apply flex flex-col max-h-screen w-full;
 }
 
 .bgImage {
- @apply w-full h-full flex-1 object-cover
-}
-
-footer {
-  @apply fixed bottom-0 left-0 w-full flex items-center justify-between gap-4 p-4
-}
-
-footer div{
-  @apply flex flex-col
-}
-
-footer h2 {
- @apply text-[1.4rem]
-}
-
-footer h1 {
- @apply text-[0.9rem] font-extralight
-}
-
-footer button {
-  @apply bg-transparent border-none outline-none text-white p-4 duration-200 cursor-pointer
-}
-
-footer button i {
-  @apply text-[1.3rem]
-}
-
-footer button:hover{
-  @apply opacity-[0.7]
+  @apply w-full h-full flex-1 object-cover;
 }
 
 .bgGradient {
-  @apply absolute inset-0 z-[-1] bg-gradient-to-t from-[#030615] to-[#FFFFFF00]
+  @apply absolute inset-0 z-[-1] bg-gradient-to-t from-[#030615] to-[#FFFFFF00];
 }
 
-.sidebar{
-  @apply fixed inset-0 z-[10] flex flex-col
+.bgOverlay {
+  @apply absolute inset-0 bg-[#030615] opacity-[0.6];
 }
 
-.bgOverlay{
-  @apply absolute inset-0 bg-[#030615] opacity-[0.6]
+footer {
+  @apply fixed bottom-0 left-0 w-full flex items-center justify-between gap-4 p-4;
 }
 
-.sidebarContents{
-  @apply z-[15] relative flex flex-col gap-4 p-4 overflow-y-scroll h-full w-[80%] max-w-[800px] ml-auto bg-[#030615]
+footer div {
+  @apply flex flex-col;
 }
-.sidebarContents h2{
-  @apply font-extralight text-[1.4rem]
+
+footer h2 {
+  @apply text-[1.4rem];
+}
+
+footer h1 {
+  @apply text-[0.9rem] font-extralight;
+}
+
+footer button {
+  @apply bg-transparent border-none outline-none text-white p-4 duration-200 cursor-pointer;
+}
+
+footer button i {
+  @apply text-[1.3rem];
+}
+
+footer button:hover {
+  @apply opacity-[0.7];
+}
+
+
+.sidebar {
+  @apply fixed inset-0 z-[10] flex flex-col;
+}
+
+.sidebarContents {
+  @apply z-[15] relative flex flex-col gap-4 p-4 overflow-y-scroll h-full w-[80%] max-w-[800px] ml-auto bg-[#030615];
+}
+.sidebarContents h2 {
+  @apply font-extralight text-[1.4rem];
 }
 
 .sidebarContents div {
- @apply flex-1
+  @apply flex-1;
 }
 
-.sidebarContents button{
-  @apply bg-transparent border-none outline-none text-white py-4 duration-200 cursor-pointer mr-auto
+.sidebarContents button {
+  @apply bg-transparent border-none outline-none text-white py-4 duration-200 cursor-pointer mr-auto;
 }
-.sidebarContents button:hover{
-  @apply opacity-[0.7]
-}
-
-.descriptionContainer{
-  @apply flex flex-col gap-[0.5rem]
-}
-.descriptionTitle{
-  @apply font-extralight text-[1.4rem]
+.sidebarContents button:hover {
+  @apply opacity-[0.7];
 }
 
-.loadingState{
-  @apply flex items-center justify-center flex-1
+.descriptionContainer {
+  @apply flex flex-col gap-[0.5rem];
+}
+.descriptionTitle {
+  @apply font-extralight text-[1.4rem];
+}
+
+.loadingState {
+  @apply flex items-center justify-center flex-1;
 }
 /* .loadingState i{
   @apply opacity-[0.2] text-5xl animate-spin duration-1000 ease-linear infinite
 } */
-
-
 
 @keyframes spin {
   from {
@@ -107,7 +110,7 @@ footer button:hover{
 @media (min-width: 640px) {
   .sidebar {
     @apply relative min-w-[30%] max-h-screen;
-    box-shadow: 0 0 40px 1px #030615; 
+    box-shadow: 0 0 40px 1px #030615;
   }
 
   .sidebarContents {

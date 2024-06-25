@@ -1,7 +1,7 @@
 export default function Main(){
     return (
-        <div>
-            <h1>Main</h1>
+        <div className="imgContainer">
+            <img src="/Moon.webp" alt="Moon-demo-image" className="bgImage" />
         </div>
     )
 }

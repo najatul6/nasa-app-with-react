@@ -7,8 +7,8 @@ function App() {
 
   return (
     <>
-    <Sidebar/>
      <Main/>
+    <Sidebar/>
      <Footer/>
     </>
   )
