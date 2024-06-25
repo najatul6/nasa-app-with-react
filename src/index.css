@@ -88,9 +88,9 @@ footer button:hover{
 .loadingState{
   @apply flex items-center justify-center flex-1
 }
-.loadingState i{
+/* .loadingState i{
   @apply opacity-[0.2] text-5xl animate-spin duration-1000 ease-linear infinite
-}
+} */
 
 
 
