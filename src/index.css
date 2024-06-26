@@ -67,7 +67,7 @@ footer button:hover {
   @apply z-[15] relative flex flex-col gap-4 p-4 overflow-y-scroll h-full w-[80%] max-w-[800px] ml-auto bg-[#030615];
 }
 .sidebarContents h2 {
-  @apply font-extralight text-[1.4rem];
+  @apply font-medium text-[1.4rem];
 }
 
 .sidebarContents div {
