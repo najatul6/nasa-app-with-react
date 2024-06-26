@@ -8,8 +8,8 @@ export default function Footer(props) {
 
         </div>
         <div>
+            <h1>Apod Project</h1>
             <h2>{data?.title}</h2>
-            <h1>{data?.subTitle}</h1>
         </div>
         <button onClick={handleToggleModal}>
         <FaCircleInfo />
