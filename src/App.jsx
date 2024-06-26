@@ -26,7 +26,7 @@ function App() {
         console.log(err.message);
       }
     }
-    // fetchApiData();
+    fetchApiData();
   }, []);
   return (
     <>
@@ -34,11 +34,11 @@ function App() {
         <Main />
       ) : (
         <div className="loadingState">
-          <FaEarthAmericas  className="spin_logo"/>
+          <FaEarthAmericas className="spin_logo" />
         </div>
       )}
-      {showModal && <Sidebar handleToggleModal={handleToggleModal} />}
-      <Footer handleToggleModal={handleToggleModal} />
+      {showModal && <Sidebar data={apiData} handleToggleModal={handleToggleModal} />}
+      {apiData && <Footer data={apiData} handleToggleModal={handleToggleModal} />}
     </>
   );
 }
