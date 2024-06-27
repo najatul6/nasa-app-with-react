@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 
 export default function Sidebar(props) {
@@ -19,4 +20,9 @@ export default function Sidebar(props) {
         </div>
     </div>
   )
+}
+
+Sidebar.propTypes = {
+  handleToggleModal: PropTypes.func.isRequired,
+  data: PropTypes.object.isRequired,
 }

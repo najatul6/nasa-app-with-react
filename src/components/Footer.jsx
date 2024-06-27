@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { FaCircleInfo } from "react-icons/fa6";
 
 export default function Footer(props) {
@@ -8,7 +9,7 @@ export default function Footer(props) {
 
         </div>
         <div>
-            <h1>Apod Project</h1>
+            <h1>APOD Project</h1>
             <h2>{data?.title}</h2>
         </div>
         <button onClick={handleToggleModal}>
@@ -18,3 +19,9 @@ export default function Footer(props) {
     </footer >
   )
 }
+
+Footer.propTypes = {
+  handleToggleModal: PropTypes.func.isRequired,
+  data: PropTypes.object.isRequired
+};
+

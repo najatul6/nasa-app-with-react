@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useEffect, useState } from "react";
 import Footer from "./components/Footer";
 import Main from "./components/Main";
@@ -7,7 +8,6 @@ import { FaEarthAmericas } from "react-icons/fa6";
 function App() {
   const [data, setData] = useState(null)
   const [apiData, setApiData] = useState(null);
-  const [loading, setLoading] = useState(false);
   const [showModal, setShowModal] = useState(false);
   function handleToggleModal() {
     setShowModal(!showModal);
@@ -31,7 +31,7 @@ function App() {
         const data = await res.json();
         setApiData(data);
       } catch (err) {
-        console.log(err.message);
+        console.log(err.code, err.message);
       }
     }
     fetchApiData();
@@ -55,4 +55,9 @@ function App() {
   );
 }
 
+App.propTypes = {
+ 
+};
+
 export default App;
+
