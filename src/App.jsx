@@ -5,6 +5,7 @@ import Sidebar from "./components/Sidebar";
 import { FaEarthAmericas } from "react-icons/fa6";
 
 function App() {
+  const [data, setData] = useState(null)
   const [apiData, setApiData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -16,6 +17,15 @@ function App() {
     async function fetchApiData() {
       const NASA_KEY = import.meta.env.VITE_NASA_KEY;
       const url = 'https://api.nasa.gov/planetary/apod' + `?api_key=${NASA_KEY}`
+      const today = (new Date()).toDateString()
+      const localKey = `NASA-${today}`
+      if (localStorage.getItem(localKey)) {
+        const apiData = JSON.parse(localStorage.getItem(localKey))
+        setData(apiData)
+        console.log('Fetched from cache today')
+        return
+      }
+      localStorage.clear()
       try {
         const res = await fetch(url);
         const data = await res.json();

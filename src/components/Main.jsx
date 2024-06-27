@@ -1,11 +1,15 @@
+import defaultBg from '/Moon.webp' 
 export default function Main(props){
     const{data}=props
-    console.log(data);
+
     return (
         <div className="imgContainer">
-            <img src={data.hdurl} alt={data.title || 'bg-img'} className="bgImage" />
-            <video src={data.url} controls></video>
-            {/* <iframe src={data?.url} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;"></iframe> */}
+            
+            <img
+                src={data?.url || `${defaultBg}`}
+                alt={data?.title || 'background-img'}
+                className="bgImage"
+            />
         </div>
     )
 }
