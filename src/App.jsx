@@ -30,7 +30,6 @@ function App() {
         const res = await fetch(url);
         const data = await res.json();
         setApiData(data);
-        console.log(apiData);
       } catch (err) {
         console.log(err.message);
       }
