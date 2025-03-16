@@ -16,6 +16,7 @@ export default function Footer(props) {
         <FaCircleInfo />
 
         </button>
+        <p>Created By - <a href="https://najatul-islam.vercel.app/" target="_blank">Najatul Islam</a></p>
     </footer >
   )
 }
